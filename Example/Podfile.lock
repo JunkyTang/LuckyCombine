@@ -1,0 +1,16 @@
+PODS:
+  - LuckyCombine (0.1.0)
+
+DEPENDENCIES:
+  - LuckyCombine (from `../`)
+
+EXTERNAL SOURCES:
+  LuckyCombine:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LuckyCombine: 81fb27479a2fe154495b999f3ad8bc12e0738f16
+
+PODFILE CHECKSUM: 10730ab2c0a6b0282527d03996c85ef5e71f8302
+
+COCOAPODS: 1.15.2
