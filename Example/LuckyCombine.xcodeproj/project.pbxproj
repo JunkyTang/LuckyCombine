@@ -31,7 +31,7 @@
 		1E6BBED2FD143F78EC7F6D67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3CD0DE940BF1613FC508833F /* Pods-LuckyCombine_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyCombine_Tests.release.xcconfig"; path = "Target Support Files/Pods-LuckyCombine_Tests/Pods-LuckyCombine_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3D5A2C50A0F854A041B6C9B3 /* Pods_LuckyCombine_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyCombine_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AEB6541F38A3BA229F8413C /* LuckyCombine.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LuckyCombine.podspec; path = ../LuckyCombine.podspec; sourceTree = "<group>"; };
+		5AEB6541F38A3BA229F8413C /* LuckyCombine.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LuckyCombine.podspec; path = ../LuckyCombine.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* LuckyCombine_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyCombine_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -518,6 +518,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +537,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

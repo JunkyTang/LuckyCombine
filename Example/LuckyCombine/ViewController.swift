@@ -11,12 +11,6 @@ import Combine
 import LuckyCombine
 
 class ViewController: UIViewController {
-
-    @CurrentValueSubjectProperty
-    var a: Int = 0
-    
-    @CurrentValueOnChangeSubjectProperty
-    var b: Int = 0
     
     
     private var cancellables: Set<AnyCancellable> = []
@@ -26,13 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        $a.sinkOnMain { value in
-            print("a: \(value)")
-        }.store(in: &cancellables)
-        
-        $b.sinkOnMain { value in
-            print("b: \(value)")
-        }.store(in: &cancellables)
         
     }
 
@@ -45,8 +32,6 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        a = 1
-        b = 1
     }
     
 }

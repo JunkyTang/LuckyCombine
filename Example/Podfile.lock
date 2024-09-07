@@ -1,5 +1,5 @@
 PODS:
-  - LuckyCombine (0.1.0)
+  - LuckyCombine (0.1.1)
 
 DEPENDENCIES:
   - LuckyCombine (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LuckyCombine: 81fb27479a2fe154495b999f3ad8bc12e0738f16
+  LuckyCombine: 23e7c891a2143867b888a0c82ad0695e84611979
 
 PODFILE CHECKSUM: 10730ab2c0a6b0282527d03996c85ef5e71f8302
 
