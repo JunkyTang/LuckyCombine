@@ -16,6 +16,13 @@ extension Publisher where Self.Failure == Never {
             object?[keyPath: keyPath] = newValue
         }
     }
+    
+    public func bindTo<T: AnyObject>(object: T, keyPath: WritableKeyPath<T, Output?>) -> AnyCancellable {
+        sink { [weak object] newValue in
+            object?[keyPath: keyPath] = newValue
+        }
+    }
+
 }
 
 

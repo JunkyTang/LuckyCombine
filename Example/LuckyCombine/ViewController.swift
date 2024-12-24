@@ -15,11 +15,15 @@ class ViewController: UIViewController {
     
     private var cancellables: Set<AnyCancellable> = []
     
+    let fld = UITextField(frame: CGRectMake(100, 100, 100, 100))
+    
+    let value = CurrentValueSubject<CGRect, Never>(.zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        value.bindTo(object: fld, keyPath: \.frame).store(in: &cancellables)
         
     }
 
