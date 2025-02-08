@@ -38,3 +38,46 @@ extension Publisher where Self.Failure == Never {
     }
     
 }
+
+
+
+
+extension Publisher where Self.Failure == Never {
+
+    
+    public func trySink(throwable: @escaping (Output) throws -> Void) -> AnyCancellable {
+        sink { out in
+            do {
+                try throwable(out)
+            } catch {
+                Config.exceptionHandler(error)
+            }
+        }
+    }
+    
+    public func asyncSink(asyncable: @escaping (Output) async -> Void) -> AnyCancellable {
+        sink { out in
+            Task {
+                await asyncable(out)
+            }
+        }
+    }
+    
+    public func tryAsyncSink(receiveValue: @escaping (Output) async throws -> Void) -> AnyCancellable {
+        sink { out in
+            Task {
+                do {
+                    try await receiveValue(out)
+                } catch {
+                    Config.exceptionHandler(error)
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+}
