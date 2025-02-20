@@ -45,7 +45,7 @@ extension Publisher where Self.Failure == Never {
 extension Publisher where Self.Failure == Never {
 
     
-    public func trySink(_ throwable: @escaping (Output) throws -> Void) -> AnyCancellable {
+    public func trySink(throwable: @escaping (Output) throws -> Void) -> AnyCancellable {
         sink { out in
             do {
                 try throwable(out)
