@@ -57,7 +57,7 @@ extension Publisher where Self.Failure == Never {
     
     public func asyncSink(asyncable: @escaping (Output) async -> Void) -> AnyCancellable {
         sink { out in
-            Task {
+            Task.detached {
                 await asyncable(out)
             }
         }
@@ -65,7 +65,7 @@ extension Publisher where Self.Failure == Never {
     
     public func tryAsyncSink(receiveValue: @escaping (Output) async throws -> Void) -> AnyCancellable {
         sink { out in
-            Task {
+            Task.detached {
                 do {
                     try await receiveValue(out)
                 } catch {
